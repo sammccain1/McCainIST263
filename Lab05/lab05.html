@@ -41,42 +41,25 @@
     </table>
     <h1> Forms </h1>
     <form action= "https://formspree.io/f/mvgbebzj" method ="POST">
-        <label for="fname"> First Name: </label><br>
-        <input type="text" id="fname" name="fname"><br>
+        <label for="name"> Your Name: </label><br>
+        <input type="text" id="name" name="name"><br>
         <br>
-        <label for="comments"> Comments:</label><br>
-        <textarea id="comments" name="comments" roww="6"> Lorem Impsum
+        <label for="message"> Message For Sam:</label><br>
+        <textarea id="message" name="message" roww="6"> Lorem Impsum
         </textarea>
         <br>
-        <p> Please Select Your Age:</p>
-            <input type="radio" id="age1" name = age value="30">
-            <label for="age1">0-30</label><br>
-            <input type="radio" id="age2" name = age value="60">
-            <label for="age2">31-60</label><br>
-            <input type="radio" id="age3" name = age value="100">
-            <label for="age3">61-100</label><br>
+            <p> How would you like to contact Sam?</p>
 
-
-            <p> What type of Vehicle do you have?</p>
-
-            <input type = "checkbox" id = "vehicle1" name ="vehicle1" value="car">
-            <label for="vehicle1">I have a car</label>
-            <input type = "checkbox" id = "vehicle2" name ="vehicle2" value="bike">
-            <label for="vehicle2">I have a bike</label>
-            <input type = "checkbox" id = "vehicle3" name ="vehicle3" value="boat">
-            <label for="vehicle3">I have a boat</label>
-            
-            <br>
-
-            <label for="cars">Choose a car:</label>
-            <select>
-                <option value="Audi">Audi</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="volvo">BMW</option>
-            </select>
+            <input type = "checkbox" id = "contact1" name ="contact1" value="email">
+            <label for="contact1">Email</label>
+            <input type = "checkbox" id = "contact2" name ="contact2" value="TextMessage">
+            <label for="contact2">Text Message</label>
+            <input type = "checkbox" id = "contact3" name ="contact3" value="LinkedIn">
+            <label for="contact3">I have a boat</label>
         <br>
         <br>
         <input type="submit" value = "Send Form">
     </form>
 
 </body>
+</html>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <table border="2">
+    <table>
         <caption> Skills </caption>
         <tr>
             <th>Category</th>
@@ -38,6 +38,53 @@
             <td>HTML</td>
             <td>Proficient</td>
         </tr>
+        <tr>
+            <td>Coding</td>
+            <td>JavaScript</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>Soft Skills</td>
+            <td>Customer Service</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>Tableau</td>
+            <td>Proficient</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>Microsoft Excel</td>
+            <td>Master</td>
+        </tr>
+        <tr>
+            <td>Software</td>
+            <td>Wireshark</td>
+            <td>Proficient</td>
+        </tr>
     </table>
+    <h1> Forms </h1>
+    <form action= "https://formspree.io/f/mvgbebzj" method ="POST">
+        <label for="name"> Your Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+        <br>
+        <label for="message"> Message For Sam:</label><br>
+        <textarea id="message" name="message" row="6"> 
+        </textarea>
+        <br>
+            <p> How would you like to contact Sam?</p>
+
+            <input type = "checkbox" id = "contact1" name ="contact1" value="email">
+            <label for="contact1">Email</label>
+            <input type = "checkbox" id = "contact2" name ="contact2" value="TextMessage">
+            <label for="contact2">Text Message</label>
+            <input type = "checkbox" id = "contact3" name ="contact3" value="LinkedIn">
+            <label for="contact3">LinkedIn</label>
+        <br>
+        <br>
+        <input type="submit" value = "Send Form">
+    </form>
 
 </body>
+</html>

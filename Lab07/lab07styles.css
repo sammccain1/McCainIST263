@@ -14,15 +14,16 @@ a:visited {
 }
 
 nav a {
+  color: #00008B;        
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
 }
 
 nav a:hover {
   text-decoration: underline;
-}
-
-nav a {
-  color: #00008B;  
+  background-color:#00008B;
+  color: white;
 }

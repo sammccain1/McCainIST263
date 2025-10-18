@@ -1,0 +1,29 @@
+nav {
+  background-color: #ADD8E6;
+  color: black;
+  text-align: center;
+  padding: .5em;
+}
+
+a:link {
+  color: maroon;
+}
+
+a:visited {
+  color: gray;
+}
+
+nav a {
+  color: #00008B;        
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background-color:#00008B;
+  color: white;
+}

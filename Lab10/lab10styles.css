@@ -1,0 +1,105 @@
+nav {
+  background-color: #ADD8E6;
+  color: black;
+  text-align: center;
+  padding: .5em;
+}
+
+a:link {
+  color: maroon;
+}
+
+a:visited {
+  color: gray;
+}
+/* double check*/
+nav a {
+  color: #00008B;        
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background-color:#00008B;
+  color: white;
+}
+.flex1, .flex2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; 
+            margin: 20px;
+        }
+
+        
+        .addressbox, .linksbox, .formbox, .mapbox {
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            padding: 20px;
+            flex-basis: 50%; 
+            box-sizing: border-box;
+        }
+
+        .addressbox {
+            background-color: #6FB8EB;
+        }
+
+        .linksbox {
+            background-color: #47A4E6;
+        }
+
+        .formbox {
+            background-color: #47A4E6;
+            padding-right: 10px;
+        }
+
+        .mapbox {
+            background-color: #6FB8EB;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #fafafa;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005fa3;
+        }

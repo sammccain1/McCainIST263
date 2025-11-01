@@ -27,6 +27,18 @@ nav a:hover {
   background-color:#00008B;
   color: white;
 }
+/* Lab 10 Changes*/
+@media screen and (max-width: 768px) {
+
+  nav a {
+    display: block;
+    width: 100%;
+    margin: 8px 0; 
+  }
+  nav span {
+    display: none;
+  }
+}
 
 .banner {
   display: block;

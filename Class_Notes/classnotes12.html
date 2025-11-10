@@ -9,9 +9,21 @@
     function bigly() {
         document.getElementById("p1").innerHTML="New Content"
     }
+    function wrongAnswer() {
+        document.getElementById("wrong").innerHTML="<span style='color:red;'> True is the wrong answer!</span>"
+    }
+    function rightAnswer() {
+        document.getElementById("correct").innerHTML="<span style='color:green;'> False is the correct answer!</span>"
+    }
 </script>
 <body>
     <p id="p1" onclick="bigly()">Content Goes Here</p>
     <p id="p2">Paragraph 2</p>
+
+   
+    <h1> My JavaScript Quiz</h1>
+    <p> Java and JavaScript are the same thing</p>
+    <p onclick="wrongAnswer();" id="wrong">True</p>
+    <p onclick="rightAnswer();" id="correct">False</p>
 </body>
 </html>

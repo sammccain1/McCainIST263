@@ -15,15 +15,23 @@
     function rightAnswer() {
         document.getElementById("correct").innerHTML="<span style='color:green;'> False is the correct answer!</span>"
     }
+    function changeImage() {
+        document.getElementById("randimg").setAttribute("src", "../Final_Project/Project-Media/Diagrams/3Strap.svg")
+    }
+    function bluey() {
+        document.getElementById("p2").style.color="#FFA500";
+    }
 </script>
 <body>
     <p id="p1" onclick="bigly()">Content Goes Here</p>
-    <p id="p2">Paragraph 2</p>
+    <p id="p2" onclick="bluey()">Paragraph 2</p>
 
    
-    <h1> My JavaScript Quiz</h1>
+    <h1 onmouseover="bluey()"> My JavaScript Quiz</h1>
     <p> Java and JavaScript are the same thing</p>
     <p onclick="wrongAnswer();" id="wrong">True</p>
     <p onclick="rightAnswer();" id="correct">False</p>
+
+    <img src="../Images/lab05_final.png" id="randimg" onclick="changeImage();">
 </body>
 </html>

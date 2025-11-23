@@ -1,0 +1,94 @@
+nav {
+  background-color: #ADD8E6;
+  color: black;
+  text-align: center;
+  padding: .5em;
+}
+
+a:link {
+  color: maroon;
+}
+
+a:visited {
+  color: gray;
+}
+
+nav a {
+  color: #00008B;        
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background-color:#00008B;
+  color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #fafafa;
+}
+/* Lab 10 Changes*/
+@media screen and (max-width: 768px) {
+
+  nav a {
+    display: block;
+    width: 100%;
+    margin: 8px 0; 
+  }
+  nav span {
+    display: none;
+  }
+}
+
+
+.pageheading {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.skillsflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 20px;
+}
+
+
+.skillstable table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.skillsimage {
+    text-align: center;
+    flex-basis: 40%;
+}
+
+.skillsimage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

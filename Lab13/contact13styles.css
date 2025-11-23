@@ -22,7 +22,7 @@ nav {
 }
 
 a:link {
-  color: #b80000;
+  color: #750000;
 }
 
 a:visited {
@@ -83,11 +83,11 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .linksbox {
-    background-color: #47A4E6;
+    background-color: #9CCDF2;
 }
 
 .formbox {
-    background-color: #47A4E6;
+    background-color: #9CCDF2;
 }
 
 .mapbox {

@@ -78,20 +78,8 @@ a:focus, button:focus, input:focus, textarea:focus {
     box-sizing: border-box;
 }
 
-.addressbox {
-    background-color: #6FB8EB;
-}
-
-.linksbox {
-    background-color: #9CCDF2;
-}
-
-.formbox {
-    background-color: #9CCDF2;
-}
-
-.mapbox {
-    background-color: #6FB8EB;
+.addressbox, .mapbox, .addressbox, .formbox {
+  background-color: #ADD8E6;;
 }
 
 nav {

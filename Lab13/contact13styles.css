@@ -78,7 +78,7 @@ a:focus, button:focus, input:focus, textarea:focus {
     box-sizing: border-box;
 }
 
-.addressbox, .mapbox, .addressbox, .formbox {
+.addressbox, .mapbox, .linksbox, .formbox {
   background-color: #ADD8E6;;
 }
 

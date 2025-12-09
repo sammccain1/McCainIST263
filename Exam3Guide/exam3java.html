@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Interactive Demo</h1>
+    
+    <div id="box">
+        <p id="message">Hover over me!</p>
+    </div>
+    
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="toggleVisibility()">Hide/Show Box</button>
+    <button onclick="changeImage()">Change Image</button>
+    
+    <br><br>
+    <img id="myImage" src="../Final_Project/Project-Media/Diagrams/3Buzz.svg" alt="Image" 
+         onmouseover="this.src='../Final_Project/Project-Media/Diagrams/3Strap.svg'" 
+         onmouseout="this.src='../Final_Project/Project-Media/Diagrams/Quads.svg'">
+    
+    <script>
+        function changeColor() {
+            document.getElementById("box").style.backgroundColor = "coral";
+        }
+        
+        function changeText() {
+            document.getElementById("message").innerHTML = "<strong>Text Changed!</strong>";
+        }
+        
+        function toggleVisibility() {
+            var box = document.getElementById("box");
+            if (box.style.display === "none") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+        
+        function changeImage() {
+            document.getElementById("myImage").setAttribute("src", "../Final_Project/Project-Media/Diagrams/3Strap.svg");
+        }
+    </script>
+</body>
+</html>

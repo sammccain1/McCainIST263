@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Maintenance Request - Syracuse University</title>
+    <link rel="stylesheet" href="laundrystyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Maintenance Request Form</h1>
+        </header>
+
+        <div class="form-container">
+            <form id="maintenanceForm">
+                <div class="form-group">
+                    <label for="residenceHall">Residence Hall</label>
+                    <select id="residenceHall" name="residenceHall" required>
+                        <option value="">Select a residence hall</option>
+                        <option value="Booth Hall">Booth Hall</option>
+                        <option value="Brewster Hall">Brewster Hall</option>
+                        <option value="Day Hall">Day Hall</option>
+                        <option value="Ernie Davis Hall">Ernie Davis Hall</option>
+                        <option value="Flint Hall">Flint Hall</option>
+                        <option value="Haven Hall">Haven Hall</option>
+                        <option value="Kimmel Hall">Kimmel Hall</option>
+                        <option value="Lawrinson Hall">Lawrinson Hall</option>
+                        <option value="Marion Hall">Marion Hall</option>
+                        <option value="Sadler Hall">Sadler Hall</option>
+                        <option value="Shaw Hall">Shaw Hall</option>
+                        <option value="Skyhalls">Skyhalls</option>
+                        <option value="Watson Hall">Watson Hall</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Type of Machine</label>
+                    <div class="button-group">
+                        <button type="button" class="machine-btn" data-value="Washer">Washer</button>
+                        <button type="button" class="machine-btn" data-value="Dryer">Dryer</button>
+                    </div>
+                    <input type="hidden" id="machineType" name="machineType" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="machineNumber">Machine Number</label>
+                    <input type="text" id="machineNumber" name="machineNumber" placeholder="e.g., W-12 or D-05"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="issueSummary">Issue Summary</label>
+                    <textarea id="issueSummary" name="issueSummary" rows="6"
+                        placeholder="Please describe the issue with the machine..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Request</button>
+                <div id="statusMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Machine type button selection
+        const machineButtons = document.querySelectorAll('.machine-btn');
+        const machineTypeInput = document.getElementById('machineType');
+
+        machineButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                machineButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                machineTypeInput.value = this.getAttribute('data-value');
+            });
+        });
+
+        // Form submission
+        const form = document.getElementById('maintenanceForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Validate machine type is selected
+            if (!machineTypeInput.value) {
+                statusMessage.textContent = 'Please select a machine type';
+                statusMessage.style.color = '#f76900';
+                return;
+            }
+
+            // Replace this URL with your Google Apps Script web app URL
+            const scriptURL = 'https://script.google.com/a/macros/g.syr.edu/s/AKfycbw_lHrYrNU-DAgULqEWw10yFyN636LFb7ubwRXp9SSvUYUJoKSJdPdAEEiLhw1n9z2XJA/exec';
+
+            // Get form values
+            const formData = {
+                residenceHall: document.getElementById('residenceHall').value,
+                machineType: document.getElementById('machineType').value,
+                machineNumber: document.getElementById('machineNumber').value,
+                issueSummary: document.getElementById('issueSummary').value
+            };
+
+            try {
+                statusMessage.textContent = 'Submitting...';
+                statusMessage.style.color = '#000E54';
+
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(formData)
+                });
+
+                // With no-cors mode, we assume success if no error is thrown
+                statusMessage.textContent = 'Request submitted successfully!';
+                statusMessage.style.color = '#008000';
+                form.reset();
+                machineButtons.forEach(btn => btn.classList.remove('active'));
+
+            } catch (error) {
+                statusMessage.textContent = 'Error submitting request. Please try again.';
+                statusMessage.style.color = '#f76900';
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>

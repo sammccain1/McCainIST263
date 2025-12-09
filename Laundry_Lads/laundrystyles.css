@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #ffffff;
+    color: #000E54;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f76900;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border: 2px solid #000E54;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 14, 84, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000E54;
+    font-size: 16px;
+}
+
+select, input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #000E54;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: #000E54;
+    background-color: #ffffff;
+}
+
+select:focus, input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #f76900;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.machine-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #000E54;
+    color: #000E54;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.machine-btn:hover {
+    background-color: #f76900;
+    color: #ffffff;
+    border-color: #f76900;
+}
+
+.machine-btn.active {
+    background-color: #000E54;
+    color: #ffffff;
+    border-color: #000E54;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f76900;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d85a00;
+}
+
+.submit-btn:active {
+    background-color: #c04f00;
+}
+
+#statusMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}

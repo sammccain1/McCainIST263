@@ -22,7 +22,8 @@ img {
 
 /* HEADER STYLES */
 header {
-    background-color: #013369; /* NFL Navy Blue */
+    background-color: #013369;
+    /* NFL Navy Blue */
     color: white;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -42,7 +43,8 @@ nav ul {
 }
 
 nav li {
-    background-color: #D50A0A; /* NFL Red */
+    background-color: #D50A0A;
+    /* NFL Red */
     border-radius: 5px;
 }
 
@@ -116,6 +118,21 @@ article p {
     margin: 0 auto;
     border: 2px solid #013369;
     border-radius: 5px;
+}
+
+/*  VIDEO STYLES */
+.video {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.video video {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #013369;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
 }
 
 /*  STRENGTHS/WEAKNESSES TABLE STYLES */
@@ -225,7 +242,10 @@ footer p {
 
 /*  PRINT STYLES  */
 @media print {
-    header, footer, nav {
+
+    header,
+    footer,
+    nav {
         display: none;
     }
 
